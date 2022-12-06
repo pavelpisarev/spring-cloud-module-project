@@ -1,4 +1,5 @@
 rootProject.name = 'spring-cloud-module-project'
 include 'eureka-server'
 include 'eureka-client'
+include 'api-gateway'
 
