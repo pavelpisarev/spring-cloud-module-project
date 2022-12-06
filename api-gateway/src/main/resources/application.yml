@@ -1,11 +1,17 @@
 server:
-  port: 8082
+  port: 80
 
 spring:
   application:
     name: api-gateway
   cloud:
     gateway:
+      routes:
+        - id: test
+          uri: "lb://eureka-client"
+          predicates:
+            - Path=/test
+            - Method=GET
       discovery:
         locator:
           enabled: true
